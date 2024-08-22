@@ -1,9 +1,9 @@
 <?php
 // variables
-$nombre = "Javett";
+$nombre = "Javett Pineda";
 $edad   = "28 años";
 $correo = "javett.pineda3@gmail.com";
-$telefono = "62682378";
+$telefono = "6268-2378";
 
 // constante
 define("OCUPACION", "Estudiante de Desarrollo de Software");

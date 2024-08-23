@@ -29,3 +29,4 @@ echo "Pre-incremento (++c): " . ++$c . "<br>";
 echo "Valor final de c: $c<br>";
 ?>
     
+

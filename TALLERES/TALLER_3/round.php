@@ -15,7 +15,7 @@ echo "</br>Número negativo: $negativo</br>";
 echo "Redondeado: " . round($negativo) . "</br>";
 
 // Ejercicio: Calcular el promedio de calificaciones y redondear
-$calificaciones = [85.5, 92.3, 78.8, 89.9, 95.2];
+$calificaciones = [92.3, 64.5, 85.3, 87.2, 76.4];
 $promedio = array_sum($calificaciones) / count($calificaciones);
 echo "</br>Promedio de calificaciones: $promedio</br>";
 echo "Promedio redondeado: " . round($promedio, 1) . "</br>";

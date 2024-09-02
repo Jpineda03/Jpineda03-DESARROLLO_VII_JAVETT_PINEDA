@@ -1,0 +1,23 @@
+[
+    {"nombre": "Laptop", "precio": 1199.99, "cantidad": 12},
+    {"nombre": "Smartphone", "precio": 599.99, "cantidad": 20},
+    {"nombre": "Auriculares", "precio": 89.99, "cantidad": 50},
+    {"nombre": "Tableta", "precio": 349.99, "cantidad": 15},
+    {"nombre": "Monitor", "precio": 199.99, "cantidad": 18},
+    {"nombre": "Teclado", "precio": 49.99, "cantidad": 40},
+    {"nombre": "Ratón", "precio": 29.99, "cantidad": 60},
+    {"nombre": "Impresora", "precio": 149.99, "cantidad": 0},
+    {"nombre": "Cámara Web", "precio": 59.99, "cantidad": 25},
+    {"nombre": "Micrófono", "precio": 99.99, "cantidad": 35},
+    {"nombre": "Parlantes", "precio": 79.99, "cantidad": 22},
+    {"nombre": "Disco Duro Externo", "precio": 129.99, "cantidad": 30},
+    {"nombre": "Cable HDMI", "precio": 14.99, "cantidad": 100},
+    {"nombre": "Cargador Universal", "precio": 39.99, "cantidad": 75},
+    {"nombre": "Router Wi-Fi", "precio": 79.99, "cantidad": 2},
+    {"nombre": "Memoria USB", "precio": 19.99, "cantidad": 150},
+    {"nombre": "Smartwatch", "precio": 149.99, "cantidad": 28},
+    {"nombre": "Tablet Pen", "precio": 59.99, "cantidad": 35},
+    {"nombre": "Batería Portátil", "precio": 49.99, "cantidad": 45},
+    {"nombre": "Repetidor Wi-Fi", "precio": 39.99, "cantidad": 32}
+  ]
+  

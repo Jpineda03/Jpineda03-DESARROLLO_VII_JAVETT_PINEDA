@@ -1,4 +1,5 @@
 <?php
+echo "<pre>";
 // 1. Crear un arreglo de 10 nombres de ciudades
 $ciudades = ["Nueva York", "Tokio", "Londres", "París", "Sídney", "Río de Janeiro", "Moscú", "Berlín", "Ciudad del Cabo", "Toronto"];
 
@@ -35,5 +36,18 @@ imprimirCiudadesOrdenadas($ciudades);
 // TAREA: Crea una función que cuente y retorne el número de ciudades que comienzan con una letra específica
 // Ejemplo de uso: contarCiudadesPorInicial($ciudades, 'S') debería retornar 1 (Singapur)
 // Tu código aquí
+
+function contarCiudadesPorInicial($ciudades, $letra) {
+    $contador = 0;
+    foreach ($ciudades as $ciudad) {
+        if (stripos($ciudad, $letra) === 0) {
+            $contador++;
+        }
+    }
+    return $contador;
+}
+
+$ciudades = $ciudades = ["Nueva York", "Tokio", "Londres", "París", "Sídney", "Río de Janeiro", "Moscú", "Berlín", "Ciudad del Cabo", "Toronto"];
+echo contarCiudadesPorInicial( $ciudades,'S');
 
 ?>

@@ -20,6 +20,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $error = "Usuario o contraseña incorrectos";
     }
+
+    include 'config_sesion.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+        die("Error de validación CSRF");
+    }
+    // ... resto del código de login ...
+}
+
+// Generar token CSRF
+$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 ?>
 

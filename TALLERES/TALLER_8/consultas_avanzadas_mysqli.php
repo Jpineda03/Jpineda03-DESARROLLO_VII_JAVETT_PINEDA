@@ -56,7 +56,7 @@ if ($result) {
     echo "Error: " . mysqli_error($conn);
 }
 
-// 4. Mostrar las últimas 5 publicaciones con el nombre del autor y la fecha de publicación
+//  Mostrar las últimas 5 publicaciones con el nombre del autor y la fecha
 $sql = "SELECT p.titulo, u.nombre as autor, p.fecha_publicacion 
         FROM publicaciones p 
         INNER JOIN usuarios u ON p.usuario_id = u.id 
@@ -75,7 +75,7 @@ if ($result) {
     echo "Error: " . mysqli_error($conn);
 }
 
-// 5. Listar los usuarios que no han realizado ninguna publicación
+// Listar los usuarios que no han realizado ninguna publicación
 $sql = "SELECT u.nombre 
         FROM usuarios u 
         LEFT JOIN publicaciones p ON u.id = p.usuario_id 
@@ -93,7 +93,7 @@ if ($result) {
     echo "Error: " . mysqli_error($conn);
 }
 
-// 6. Calcular el promedio de publicaciones por usuario
+//  Calcular el promedio de publicaciones por usuario
 $sql = "SELECT AVG(num_publicaciones) AS promedio 
         FROM (SELECT COUNT(p.id) as num_publicaciones 
               FROM usuarios u 
@@ -111,11 +111,11 @@ if ($result) {
     echo "Error: " . mysqli_error($conn);
 }
 
-// 7. Encontrar la publicación más reciente de cada usuario
+// Encontrar la publicación más reciente de cada usuario
 $sql = "SELECT u.nombre, p.titulo, MAX(p.fecha_publicacion) AS fecha_publicacion 
         FROM usuarios u 
         LEFT JOIN publicaciones p ON u.id = p.usuario_id 
-        GROUP BY u.id";
+        GROUP BY u.id, p.titulo";
 
 $result = mysqli_query($conn, $sql);
 

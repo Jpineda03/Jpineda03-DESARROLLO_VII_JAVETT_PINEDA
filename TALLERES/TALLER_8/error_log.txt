@@ -1,0 +1,1 @@
+[2024-10-19 22:42:40] Error en la transacción: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'nuevo@example.com' for key 'usuarios.email'

@@ -4,6 +4,11 @@ if(!isset($_SESSION['usuario'])) {
     header("Location: calificaciones.php");
      exit();
 }
+
+if(!isset($_SESSION['usuario2'])) {
+    header("Location: estudiante.php");
+     exit();
+}
 ?>
 
 <!DOCTYPE html>

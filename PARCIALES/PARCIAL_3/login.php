@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include 'validacion.php';
 
     if($usuario === "Mrivera" && $contrasena === "Panama2024") {
-        $_SESSION['usuario'] = $usuario;
+        $_SESSION['usuario2'] = $usuario;
         $_SESSION['rol'] = $estudiante;
         // header("Location: validacion.php");
         exit();

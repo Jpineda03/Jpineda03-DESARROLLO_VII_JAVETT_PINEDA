@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $contrasena = $_POST['contrasena'];
 
     // En un caso real, verificaríamos contra una base de datos
-    if($usuario === "Jpineda" && $contrasena === "2024") {
+    if($usuario === "Jpineda" && $contrasena === "UTP2024") {
         $_SESSION['usuario'] = $usuario;
         header("Location: lista_estudiantes.php");
         exit();
@@ -21,7 +21,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = "Usuario o contraseña incorrectos";
     }
 
-    //include 'config.sesion.php';
+    include 'calificaciones.php';
+
+    if($usuario === "Mrivera" && $contrasena === "Panama2024") {
+        $_SESSION['usuario'] = $usuario;
+        header("Location: lista_estudiantes.php");
+        exit();
+    } else {
+        $error = "Usuario o contraseña incorrectos";
+    }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {

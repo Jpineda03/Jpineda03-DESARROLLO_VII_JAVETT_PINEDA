@@ -1,12 +1,6 @@
 <?php
 session_start();
 
-// Si ya hay una sesión activa, redirigir al panel
-if(isset($_SESSION['usuario'])) {
-    header("Location: lista_estudiantes.php");
-    exit();
-}
-
 // Procesar el formulario cuando se envía
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST['usuario'];
@@ -15,17 +9,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // En un caso real, verificaríamos contra una base de datos
     if($usuario === "Jpineda" && $contrasena === "UTP2024") {
         $_SESSION['usuario'] = $usuario;
-        header("Location: lista_estudiantes.php");
+        $_SESSION['rol']= $profesor;
+        // header("Location: validacion.php");
         exit();
     } else {
         $error = "Usuario o contraseña incorrectos";
     }
 
-    include 'calificaciones.php';
+    include 'validacion.php';
 
     if($usuario === "Mrivera" && $contrasena === "Panama2024") {
         $_SESSION['usuario'] = $usuario;
-        header("Location: lista_estudiantes.php");
+        $_SESSION['rol'] = $estudiante;
+        // header("Location: validacion.php");
         exit();
     } else {
         $error = "Usuario o contraseña incorrectos";

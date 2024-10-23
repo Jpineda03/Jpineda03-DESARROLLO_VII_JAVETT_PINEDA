@@ -1,5 +1,4 @@
 <?php
-//include 'config_sesion.php';
 
 // Lista de productos
 $calificaciones = [
@@ -18,7 +17,9 @@ $calificaciones = [
     <title>Calificaciones</title>
 </head>
 <body>
-    <h2>Lista de Calificaciones</h2>
+<h1>Bienvenido</h1>
+<h2>UNIVERSIDAD TECNOLOGICA DE PANAMA</h2>
+    <h3>Lista de Calificaciones</h3>
     <ul>
         <?php foreach ($calificaciones as $calificacion): ?>
             <li>
